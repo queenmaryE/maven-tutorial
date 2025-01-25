@@ -14,6 +14,10 @@ pipeline {
                 echo 'Running Tests...'
             }
         }
-       
+        stage('Deliver') {
+            steps {
+                echo 'Delivering Application...'
+            }
+        }
     }
 }

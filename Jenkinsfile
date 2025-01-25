@@ -9,15 +9,6 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Running Tests...'
-            }
-        }
-        stage('Deliver') {
-            steps {
-                echo 'Delivering Application...'
-            }
-        }
+        
     }
 }

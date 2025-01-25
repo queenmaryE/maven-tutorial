@@ -1,9 +1,12 @@
 pipeline {
     agent any
+    triggers {
+        pollSCM('H/5 * * * *') // Polls the SCM every 5 minutes
+    }
     stages {
         stage('Checkout SCM') {
             steps {
-                checkout scm // Jenkins will use the SCM config from the UI
+                checkout scm // Uses the SCM config from the UI
             }
         }
         stage('Build') {

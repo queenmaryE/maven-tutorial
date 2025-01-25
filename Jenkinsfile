@@ -4,11 +4,6 @@ pipeline {
         pollSCM('*/5 * * * *') // Polls the SCM every 5 minutes
     }
     stages {
-        stage('Checkout SCM') {
-            steps {
-                checkout scm // Uses the SCM config from the UI
-            }
-        }
         stage('Build') {
             steps {
                 sh 'mvn clean install'
